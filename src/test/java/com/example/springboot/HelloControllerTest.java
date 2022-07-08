@@ -21,11 +21,11 @@ class HelloControllerTest {
 
     @Test
     void index() throws Exception {
-        assertEquals("Greetings from TAP 1.2!", controller.index());
+        assertEquals("Greetings from Tanzu Application Platform!", controller.index());
 
         mockMvc
             .perform(get("/"))
             .andExpect(status().isOk())
-            .andExpect(content().string("Greetings from TAP 1.2!"));
+            .andExpect(content().string("Greetings from Tanzu Application Platform!"));
     }
 }
